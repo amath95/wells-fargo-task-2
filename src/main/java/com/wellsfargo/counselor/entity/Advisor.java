@@ -5,10 +5,12 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 
 @Entity
 public class Advisor {
 
+	@OneToMany(mappedBy = "advisorId")
     @Id
     @GeneratedValue()
     private long advisorId;
